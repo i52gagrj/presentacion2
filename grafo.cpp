@@ -175,6 +175,7 @@ void Grafo::algoritmoFloyd()
 	AlgoritmosGrafos CamMin;
  	
 	//Reservamos memoria para las matrices distanciasFloyd e intermedios
+        //Esto se ha puesto para llamar al commit
 	distanciasFloyd = new TipoPeso* [numeroNodos()];
  	for (int i = 0; i < numeroNodos(); i++) 
         	distanciasFloyd[i] = new TipoPeso[numeroNodos()];
