@@ -1,1 +1,12 @@
 Pruebas con la práctica 4 de grafos de EDI.
+
+Contiene todas las practicas de grafos:
+    - Implementación del TAD Grafo
+    - Implementación de la clase practica.
+    - Implementación del algoritmo de Dijkstra.
+    - Implementación del algoritmo de Floyd.
+    - Busqueda en profundidad.
+    - Algoritmo de Prim para el arbol abarcador de coste mínimo.
+    - Caso práctico: Distancia entre provincias.
+        - Mediante Dijkstra.
+        - Mediante Floyd.
