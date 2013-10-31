@@ -52,6 +52,7 @@ void AlgoritmosGrafos::dijkstra(Grafo *g, Grafo::TipoPeso *distancia, int *prede
 	 delete(s);
 }
 
+//Función para mostrar los caminos obtenidos con el algoritmo de Dijkstra
 void AlgoritmosGrafos::caminoDijkstra(int *predecesor, int nodoOrigen, int nodoDestino)
 {
 	int k;

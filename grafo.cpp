@@ -15,9 +15,9 @@ Grafo::Grafo( int n , int dirigido)
 
 void Grafo::inicializar( int n , int tipo)
 {
- //Esta función debe hacer lo siguiente:
- //1. Asignar el número de nodos y el tipo de grafo. 
- //2. Reservar memoria para la matriz de conexión.
+ //Esta funciï¿½n debe hacer lo siguiente:
+ //1. Asignar el nï¿½mero de nodos y el tipo de grafo. 
+ //2. Reservar memoria para la matriz de conexiï¿½n.
  //3. Inicializar los pesos de lados del grafo al valor INFINITO.
  numeroNodos(n);
  dirigido(tipo);
@@ -40,14 +40,14 @@ Grafo::~Grafo( void )
 
 void Grafo::liberar( void )
 {
-  // Esta función ha de liberar la matriz de conexión del grafo.
+  // Esta funciï¿½n ha de liberar la matriz de conexiï¿½n del grafo.
     for (int i = 0; i < numeroNodos(); i++) {
         delete[] _matriz[i];
     }
     delete[] _matriz;	
 }
 
-//Funciones de interfaz para el número de nodos
+//Funciones de interfaz para el nï¿½mero de nodos
 int Grafo::numeroNodos( void ) const
 {
   return _numeroNodos;
@@ -150,10 +150,10 @@ void Grafo::algoritmoDijkstra()
 	cout << "Nodo origen: ";
 	cin >> origen;
 
-	//Ejecutamos la función Dijkstra
+	//Ejecutamos la funciï¿½n Dijkstra
 	CamMin.dijkstra(this, distancias, predecesores, origen);
 
-	//Mostramos los caminos mínimos obtenidos
+	//Mostramos los caminos mï¿½nimos obtenidos
 	for(int i = 0; i < numeroNodos();i++)
 	{
 		cout << " La distancia minima al nodo "<< i << " es " << distancias[i] << endl;
@@ -167,6 +167,7 @@ void Grafo::algoritmoDijkstra()
 }
 
 
+//Llamada al algoritmo Floyd contenido en algoritmosgrafos
 void Grafo::algoritmoFloyd()
 {
 	TipoPeso **distanciasFloyd;
@@ -182,7 +183,7 @@ void Grafo::algoritmoFloyd()
  	for (int i = 0; i < numeroNodos(); i++) 
         	intermedios[i] = new int[numeroNodos()];
 
-	//Ejecutamos la función floyd
+	//Ejecutamos la funciï¿½n floyd
   	CamMin.floyd(this, distanciasFloyd, intermedios);
 
 	//Mostramos los caminos
@@ -268,7 +269,7 @@ void Grafo::ciclosMatriz()
 	
 	potenciaMatriz(matrizConexion, n);
 
-	cout << "Matriz de conexión elevada a " << n << endl;	
+	cout << "Matriz de conexiï¿½n elevada a " << n << endl;	
 	for (int i=0; i < numeroNodos(); i++)
 	{
 		for (int j=0; j < numeroNodos(); j++)
@@ -379,10 +380,10 @@ void Grafo::provDijkstra(){
 	cout << "\n\nProvincia origen: ";
 	cin >> origen;
 
-	//Ejecutamos la función Dijkstra
+	//Ejecutamos la funciï¿½n Dijkstra
 	CamMin.dijkstra(this, distancias, predecesores, origen);
 
-	//Mostramos los caminos mínimos obtenidos
+	//Mostramos los caminos mï¿½nimos obtenidos
 	for(int i = 0; i < numeroNodos();i++)
 	{
 		cout << " La distancia minima de " << provincias[origen] << " a "<< provincias[i] << " es " << distancias[i] << endl;
@@ -427,7 +428,7 @@ void Grafo::provFloyd()
  	for (int i = 0; i < numeroNodos(); i++) 
         	intermedios[i] = new int[numeroNodos()];
 
-	//Ejecutamos la función floyd
+	//Ejecutamos la funciï¿½n floyd
   	CamMin.floyd(this, distanciasFloyd, intermedios);
 
 	//Mostramos los caminos
