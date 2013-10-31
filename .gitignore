@@ -1,1 +1,4 @@
 /nbproject/private/
+$ cat .gitignore
+*.[oa]
+*~
